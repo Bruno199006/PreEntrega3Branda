@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Ecommerce</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Filtros:</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Precio
+                </a>
+                <ul class="dropdown-menu" id="filter__precio">
+                  <li><a class="dropdown-item"></a></li>
+                  <li><a class="dropdown-item"></a></li>
+                </ul>
+              </li>
+  
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Nombre
+                </a>
+                <ul class="dropdown-menu" id="filter__nombre">
+                  <li><a class="dropdown-item"></a></li>
+                  <li><a class="dropdown-item"></a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Categoria
+                </a>
+                <ul class="dropdown-menu" id="filter__lista">
+                  <li><a class="dropdown-item" href="#">Super Heroes</a></li>
+                  <li><a class="dropdown-item" href="#">Villanos</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="user-login" class="nav-item"></div>
+        <div id="btnCarrito" style="margin-right: 60px">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+            fill="currentColor"
+            class="bi bi-cart"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+            />
+          </svg>
+          <p id="contador__carrito"></p>
+        </div>
+      </nav>
+
+
+    <p>Busque su producto aqui</p>
+
+    <div id="productos"></div>
+
+
+    <div id="carrito">
+      <table>
+        <thead>
+        <tr>
+          <th>
+            Imagen
+          </th>
+          <th>
+            Descripcion
+          </th>
+          <th>
+           Unidades
+          </th>
+          <th>
+           Precio unidad
+          </th>
+          <th>
+            Costo total
+          </th>
+          <th>
+            + o - de articulos
+          </th>
+        </tr>
+      </thead>
+      <tbody id="items">
+
+      </tbody>
+      <tfoot id="totales">
+
+      </tfoot>
+      </table>
+    </div>
+
+
+
+    <script type="module"src="./javaScript/home.js"></script>
+    <script type="module" src="./javaScript/kart.js"></script>
+    <script type="module" src="./db/products.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+#filter__input{
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+#carrito{
+    display: none;
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    width: 40%;
+    height: auto;
+    background-color: whitesmoke;
+    z-index: 1001;
+    text-align: center;
+}
