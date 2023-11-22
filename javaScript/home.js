@@ -8,6 +8,8 @@ const divProductos = document.getElementById("productos");
 /// traigo de mi db los productos y le aplico parse para que sea legible por javascript ya que el json es formato string
  export let productosEnStock = JSON.parse(localStorage.getItem("productos"));
 
+
+
 //creo un evento con la funcion de creacion de cartas y le paso mis productos anteriormente creados como parametro//
 document.addEventListener("DOMContentLoaded",() =>{
     creacionDeCardsProductos(productosEnStock)
