@@ -1,8 +1,8 @@
 
 
-//informacion local en formato json
 
-const productos = [
+
+ [
   {
     "id": 1,
     "nombre": "Funko batman",
@@ -54,9 +54,6 @@ const productos = [
   }
 ]
 
-
-//intenta cargar el array de productos desde el almacenamiento local. Si el array no está presente o no es válido en formato JSON, se establecerá el array original productos en el almacenamiento local. 
-JSON.parse(localStorage.getItem("productos"))|| localStorage.setItem("productos" , JSON.stringify(productos));
 
 
 

@@ -5,10 +5,18 @@ import { comprarProducto } from "./kart.js";
 const divProductos = document.getElementById("productos");
 
 
-/// traigo de mi db los productos y le aplico parse para que sea legible por javascript ya que el json es formato string
+// /// traigo de mi db los productos y le aplico parse para que sea legible por javascript ya que el json es formato string
  export let productosEnStock = JSON.parse(localStorage.getItem("productos"));
 
 
+//En esta seccion llamo con un fetch a los datos de mi json para que se muestren en consola
+ fetch('../db/products.json')
+ .then(response => response.json())
+ .then(data => {
+   console.log('Datos de productos:', data);
+  })
+  .catch(error => console.error('Error al obtener datos:', error));
+  
 
 //creo un evento con la funcion de creacion de cartas y le paso mis productos anteriormente creados como parametro//
 document.addEventListener("DOMContentLoaded",() =>{
@@ -17,7 +25,7 @@ document.addEventListener("DOMContentLoaded",() =>{
 
 //funcion para la creacion de cartas a cada uno de los productos de forma dinamica//
 export const creacionDeCardsProductos = (productos)=>{
-
+      
       productos.forEach(producto => {
 
         let card = document.createElement("div")
