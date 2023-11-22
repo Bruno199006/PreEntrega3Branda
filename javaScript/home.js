@@ -9,14 +9,14 @@ const divProductos = document.getElementById("productos");
  export let productosEnStock = JSON.parse(localStorage.getItem("productos"));
 
 
-//En esta seccion llamo con un fetch a los datos de mi json para que se muestren en consola
- fetch('../db/products.json')
- .then(response => response.json())
- .then(data => {
-   console.log('Datos de productos:', data);
-  })
-  .catch(error => console.error('Error al obtener datos:', error));
-  
+//En esta seccion llamo con un fetch a los datos de mi json para que se muestren en consola de forma asincrona
+ const pedirDatos = async () => {
+   const response = await fetch("../db/products.json");
+   const data = await response.json();
+
+   console.log(data);
+ }
+ pedirDatos();
 
 //creo un evento con la funcion de creacion de cartas y le paso mis productos anteriormente creados como parametro//
 document.addEventListener("DOMContentLoaded",() =>{
