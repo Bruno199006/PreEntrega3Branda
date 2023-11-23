@@ -1,4 +1,8 @@
-import { productosEnStock } from "./home.js";
+
+
+const productosDeLocalStorage = localStorage.getItem("productos");
+const productosEnStock = JSON.parse(productosDeLocalStorage);
+
 
 JSON.parse(sessionStorage.getItem("carrito")) === null && sessionStorage.setItem("carrito", JSON.stringify([]))
 
