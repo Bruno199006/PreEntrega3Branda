@@ -3,27 +3,35 @@ import { comprarProducto } from "./kart.js";
 document.addEventListener("DOMContentLoaded",() =>{
   obtenerProductos();
 })
-
+//creo la funcion asincrona para poder recibir los datos de mi json local
 async function obtenerProductos() {
   try {
     const response = await fetch("./db/products.json");
     const productos = await response.json()
+
     console.log(productos);
+
+
     localStorage.setItem("productos",JSON.stringify(productos))
+    //una vez que se reciben los datos aplico la funcion para la creacion de cartas llamando a la funcion 
+
     creacionDeCardsProductos();
+
   } catch (error) {
     console.error("Se produjo un error:", error);
   }
 }
 
 
-
+//funcion para crear las cartas de productos de forma dinamica
 const creacionDeCardsProductos = () =>{
   const divProductos = document.getElementById("productos");
   const productosDeLocalStorage = localStorage.getItem("productos");
   const productos = JSON.parse(productosDeLocalStorage);
-  productos.forEach(producto => {
 
+  //creo el forEach para recorrer cada elemento y aplicarle las cards 
+  productos.forEach(producto => {
+//se crea un elemento div,se le asigna una clase y luego se construye el html interno
     let card = document.createElement("div")
     card.className = "producto"
     card.innerHTML = `
