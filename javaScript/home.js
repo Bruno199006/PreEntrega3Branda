@@ -18,7 +18,7 @@ async function obtenerProductos() {
 
 
 
-const creacionDeCardsProductos = ()=>{
+const creacionDeCardsProductos = () =>{
   const divProductos = document.getElementById("productos");
   const productosDeLocalStorage = localStorage.getItem("productos");
   const productos = JSON.parse(productosDeLocalStorage);
