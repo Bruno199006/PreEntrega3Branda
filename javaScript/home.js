@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded",() =>{
 
 async function obtenerProductos() {
   try {
-    const response = await fetch("../db/products.json");
+    const response = await fetch("./db/products.json");
     const productos = await response.json()
     console.log(productos);
     localStorage.setItem("productos",JSON.stringify(productos))
